@@ -3,28 +3,15 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-void fskip(unsigned bytes, FILE *file) {
+void fskip(unsigned length, FILE *file) {
 	unsigned i;
-	for (i = 0; i < bytes; i++)
+	for (i = 0; i < length; i++)
 		fgetc(file);
-}
-
-void reverse_bytes(byte *data, unsigned length) {
-	byte tmp[length];
-	int i, j;
-	for (i = 0; i < length; i++) {
-		j = length - 1 - i;
-		if (j > i) {
-			tmp[j] = data[j];
-			data[j] = data[i];
-		} else {
-			data[i] = tmp[i];
-		}
-	}
 }
 
 void load_bitmap(char *path, BITMAP *bitmap) {
 	FILE *file = fopen(path, "rb");
+	byte b_width[SIZE_WORD];
 	dword i;
 	word num_colors;
 	int x;
@@ -34,7 +21,7 @@ void load_bitmap(char *path, BITMAP *bitmap) {
 		exit(1);
 	}
 	// Type
-	if (!(fgetc(file) == 'B' || fgetc(file) == 'M')) {
+	if (fgetc(file) != 'B' || fgetc(file) != 'M') {
 		printf("Inalid Bitmap file: %s\n", path);
 		fclose(file);
 		exit(1);
@@ -47,12 +34,11 @@ void load_bitmap(char *path, BITMAP *bitmap) {
 	fskip(SIZE_DWORD, file); // headerSize
 	// Width
 	fread(&bitmap->width, SIZE_DWORD, 1, file);
-	reverse_bytes((char *)bitmap->width, SIZE_DWORD);
-	fskip(SIZE_DWORD, file);
+
+	// fskip(SIZE_DWORD, file);
 	// Height
 	fread(&bitmap->height, SIZE_DWORD, 1, file);
-	reverse_bytes((char *)bitmap->height, SIZE_DWORD);
-	fskip(SIZE_DWORD, file);
+	// fskip(SIZE_DWORD, file);
 	fskip(SIZE_WORD, file);	 // Planes
 	fskip(SIZE_WORD, file);	 // BitsPerPixel
 	fskip(SIZE_DWORD, file); // Compression

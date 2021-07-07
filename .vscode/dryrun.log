@@ -1,0 +1,6 @@
+make \\build\\run\\sandbox.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/tumble/Documents/dev/dos/dos-sandbox'
+make: Leaving directory '/home/tumble/Documents/dev/dos/dos-sandbox'
+ 
+make: *** No rule to make target '\build\run\sandbox.exe'.
+ 

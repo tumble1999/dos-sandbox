@@ -1,0 +1,408 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Jul  7 09:51:32 2021
+
+# Variables
+
+# environment
+CADENCE_AUTO_STARTED = true
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/tumble/.gtkrc:/home/tumble/.config/gtkrc
+# makefile (from 'Makefile', line 6)
+OBJDIR = dos
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-912af7fe-8644-4f4b-8137-75a9a748e9d8.sock
+# environment
+VSCODE_CWD = /home/tumble
+# environment
+NVM_DIR = /home/tumble/.local/share/nvm
+# default
+MAKE_COMMAND := make
+# environment
+rvm_user_install_flag = 0
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+LADSPA_PATH = /home/tumble/.ladspa:/usr/lib/ladspa:/usr/local/lib/ladspa
+# environment
+rvm_bin_path = /usr/local/rvm/bin
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+rvm_loaded_flag = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/tumble/Documents/dev/dos/dos-sandbox
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# makefile (from 'Makefile', line 7)
+OUTDIR = run
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+rvm_stored_umask = 0022
+# environment
+NVM_INC = /home/tumble/.local/share/nvm/versions/node/v11.15.0/include/node
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/tumble/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GEM_PATH = /usr/local/rvm/gems/ruby-2.7.1:/usr/local/rvm/gems/ruby-2.7.1@global
+# makefile
+MAKEFLAGS = pqrR
+# environment
+DEVKITARM = /opt/devkitpro/devkitARM
+# makefile
+CURDIR := /home/tumble/Documents/dev/dos/dos-sandbox
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PAM_KWALLET5_LOGIN = /run/user/1000/kwallet5.socket
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-nabaN25FyUbD/agent.1496
+# default
+.SHELLFLAGS := -c
+# environment
+NVM_BIN = /home/tumble/.local/share/nvm/versions/node/v11.15.0/bin
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GIT_ASKPASS = /usr/bin/ksshaskpass
+# environment
+XCURSOR_THEME = breeze_cursors
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCodium","submitURL":"","uploadToServer":false}
+# environment
+XDG_SESSION_DESKTOP = KDE
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+LV2_PATH = /home/tumble/.lv2:/usr/lib/lv2:/usr/local/lib/lv2
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 1)
+\ = \\
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 5791
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+DEVKITPPC = /opt/devkitpro/devkitPPC
+# environment
+MY_RUBY_HOME = /usr/local/rvm/rubies/ruby-2.7.1
+# environment
+SESSION_MANAGER = local/tumble-pc:@/tmp/.ICE-unix/1994,unix/tumble-pc:/tmp/.ICE-unix/1994
+# automatic
+*F = $(notdir $*)
+# environment
+VST_PATH = /home/tumble/.vst:/usr/lib/vst:/usr/local/lib/vst
+# environment
+CHROME_DESKTOP = codium-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+RVM_DIR = /home/tumble/.local/share/rvm
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+BREAKPAD_DUMP_LOCATION = /home/tumble/.config/VSCodium/exthost Crash Reports
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 0
+# environment
+rvm_path = /usr/local/rvm
+# environment
+JENV_LOADED = 1
+# environment
+MAKELEVEL := 0
+# makefile (from 'Makefile', line 11)
+OUTPATH = $(BUILD)$(\)$(OUTDIR)
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/tumble/.jenv/shims:/home/tumble/.local/share/jenv/bin:/home/tumble/.local/bin:/opt/devkitpro/tools/bin:/home/tumble/.local/share/nvm/versions/node/v11.15.0/bin:/usr/local/rvm/gems/ruby-2.7.1/bin:/usr/local/rvm/gems/ruby-2.7.1@global/bin:/usr/local/rvm/rubies/ruby-2.7.1/bin:/opt/devkitpro/tools/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/rvm/bin:/home/tumble/.local/bin:/home/tumble/.rvm/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = 
+# automatic
+^F = $(notdir $^)
+# environment
+SARPNT_PORT = 6980
+# environment
+JENV_SHELL = bash
+# environment
+VSCODE_LOG_NATIVE = false
+# makefile (from 'Makefile', line 15)
+O_FILES = $(C_FILES:.c=.o)
+# environment
+DOCKER_HOST = tcp://127.0.0.1:2375
+# automatic
+?F = $(notdir $?)
+# environment
+KDE_APPLICATIONS_AS_SCOPE = 1
+# environment
+DEVKITPRO = /opt/devkitpro
+# environment
+XDG_SEAT = seat0
+# environment
+GTK_IM_MODULE = ibus
+# environment
+DSSI_PATH = /home/tumble/.dssi:/usr/lib/dssi:/usr/local/lib/dssi
+# environment
+XDG_CURRENT_DESKTOP = KDE
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = plasma
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# environment
+IRBRC = /usr/local/rvm/rubies/ruby-2.7.1/.irbrc
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+CLUTTER_IM_MODULE = ibus
+# environment
+LOGNAME = tumble
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := \\build\\run\\sandbox.exe
+# environment
+rvm_version = 1.29.12 (latest)
+# environment
+DISPLAY = :0
+# environment
+USER = tumble
+# default
+MAKE_VERSION := 4.3
+# environment
+KDE_SESSION_UID = 1000
+# makefile (from 'Makefile', line 5)
+BUILD = build
+# makefile (from 'Makefile', line 10)
+OBJPATH = $(BUILD)$(\)$(OBJDIR)
+# environment
+SSH_AGENT_PID = 1821
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = /home/tumble/.config/VSCodium/CachedData/507ce72a4466fbb27b715c3722558bb15afa9f48
+# environment
+_ = /usr/share/codium/codium
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GEM_HOME = /usr/local/rvm/gems/ruby-2.7.1
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+NVM_CD_FLAGS = 
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/tumble/.gtkrc-2.0:/home/tumble/.config/gtkrc-2.0
+# environment
+HOME = /home/tumble
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-19ee9d75-1.57.1-main.sock
+# environment
+XDG_SESSION_ID = 3
+# makefile (from 'Makefile', line 14)
+C_FILES = $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c )))
+# environment
+XCURSOR_SIZE = 24
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 8)
+OUT = sandbox
+# default
+SUFFIXES := 
+# makefile (from 'Makefile', line 12)
+TARGET = $(\)$(OUTPATH)$(\)$(OUT)
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+ 
+# environment
+KDE_SESSION_VERSION = 5
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 2)
+CC = gcc
+# environment
+rvm_prefix = /usr/local
+# makefile (from 'Makefile', line 4)
+SOURCES = src
+# environment
+KDE_FULL_SESSION = true
+# environment
+RUBY_VERSION = ruby-2.7.1
+# variable set hash-table stats:
+# Load=141/1024=14%, Rehash=0, Collisions=16/203=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src (device 2065, inode 3522588): 8 files, no impossibilities.
+# . (device 2065, inode 3514670): 13 files, no impossibilities.
+
+# 21 files, no impossibilities in 2 directories.
+
+# Implicit Rules
+
+%.o: src\\%.c build\\dos
+#  recipe to execute (from 'Makefile', line 22):
+	@$(CC) -c $< -o $(OBJPATH)$(\)$@
+	@echo - $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+vga.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+assets.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-07-04 12:47:22.112775143
+#  File has been updated.
+#  Successfully updated.
+
+\\build\\run\\sandbox.exe: assets.o main.o vga.o build\\run
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 18):
+	@cd $(OBJPATH);$(CC) -o $@ $(O_FILES)
+	@echo $(OUT) has been linked from: $(O_FILES)
+
+build\\dos: build
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
+	@mkdir $@
+	@echo Created Object Directory
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+build:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@mkdir $@
+	@echo Created Build Directory
+
+# Not a target:
+main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build\\run: build
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 30):
+	@mkdir $@
+	@echo Created Output Directory
+
+# files hash-table stats:
+# Load=11/1024=1%, Rehash=0, Collisions=0/29=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 33 / storage = 288 B / avg = 8 B
+# current buf: size = 8162 B / used = 288 B / count = 33 / avg = 8 B
+
+# strcache performance: lookups = 48 / hit rate = 31%
+# hash-table stats:
+# Load=33/8192=0%, Rehash=0, Collisions=0/48=0%
+# Finished Make data base on Wed Jul  7 09:51:32 2021
+
+ 

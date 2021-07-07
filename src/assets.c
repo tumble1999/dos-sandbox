@@ -3,54 +3,64 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-void fskip(unsigned length, FILE *file) {
-	unsigned i;
-	for (i = 0; i < length; i++)
-		fgetc(file);
+void fskip(FILE *fp, int num_bytes) {
+	int i;
+	for (i = 0; i < num_bytes; i++)
+		fgetc(fp);
 }
 
-void load_bitmap(char *path, BITMAP *bitmap) {
-	FILE *file = fopen(path, "rb");
-	byte b_width[SIZE_WORD];
-	dword i;
+void load_bitmap(char *file, BITMAP *b) {
+	FILE *fp;
+	long index;
 	word num_colors;
 	int x;
 
-	if (file == NULL) {
-		printf("Error Reading file: %s", path);
+	/* open the file */
+	if ((fp = fopen(file, "rb")) == NULL) {
+		printf("Error opening file %s.\n", file);
 		exit(1);
 	}
-	// Type
-	if (fgetc(file) != 'B' || fgetc(file) != 'M') {
-		printf("Inalid Bitmap file: %s\n", path);
-		fclose(file);
+
+	/* check to see if it is a valid bitmap file */
+	if (fgetc(fp) != 'B' || fgetc(fp) != 'M') {
+		fclose(fp);
+		printf("%s is not a bitmap file.\n", file);
 		exit(1);
-	} else
-		printf("Valid Bitmap File: %s\n", path);
-	// Skip 16 bytes
-	fskip(SIZE_DWORD, file); // Size
-	fskip(SIZE_DWORD, file); // Reserved
-	fskip(SIZE_DWORD, file); // Offset
-	fskip(SIZE_DWORD, file); // headerSize
-	// Width
-	fread(&bitmap->width, SIZE_DWORD, 1, file);
+	}
 
-	// fskip(SIZE_DWORD, file);
-	// Height
-	fread(&bitmap->height, SIZE_DWORD, 1, file);
-	// fskip(SIZE_DWORD, file);
-	fskip(SIZE_WORD, file);	 // Planes
-	fskip(SIZE_WORD, file);	 // BitsPerPixel
-	fskip(SIZE_DWORD, file); // Compression
-	fskip(SIZE_DWORD, file); // SizeImage
-	fskip(SIZE_DWORD, file); // XPixelsPerMeter
-	fskip(SIZE_DWORD, file); // YPixelsPerMeter
-	fskip(SIZE_DWORD, file); // ColorsUsed
-	fskip(SIZE_DWORD, file); // ColorsImportant
+	/* read in the width and height of the image, and the
+	   number of colors used; ignore the rest */
+	fskip(fp, 16);
+	fread(&b->width, sizeof(word), 1, fp);
+	fskip(fp, 2);
+	fread(&b->height, sizeof(word), 1, fp);
+	fskip(fp, 22);
+	fread(&num_colors, sizeof(word), 1, fp);
+	fskip(fp, 6);
 
-	// Data
-	// fread(&bitmap->data, SIZE_BYTE, bitmap->width * bitmap->height, file);
+	/* assume we are working with an 8-bit file */
+	if (num_colors == 0)
+		num_colors = 256;
 
-	printf("Path: %s\nWidth: %d\nHeight: %d\n", path, bitmap->width,
-		   bitmap->height);
+	/* try to allocate memory */
+	if ((b->data = (byte *)malloc((word)(b->width * b->height))) == NULL) {
+		fclose(fp);
+		printf("Error allocating memory for file %s.\n", file);
+		exit(1);
+	}
+
+	/* read the palette information */
+	for (index = 0; index < num_colors; index++) {
+		b->palette[(int)(index * 3 + 2)] = fgetc(fp) >> 2;
+		b->palette[(int)(index * 3 + 1)] = fgetc(fp) >> 2;
+		b->palette[(int)(index * 3 + 0)] = fgetc(fp) >> 2;
+		x = fgetc(fp);
+	}
+
+	/* read the bitmap */
+	for (index = (b->height - 1) * b->width; index >= 0; index -= b->width)
+		for (x = 0; x < b->width; x++)
+			b->data[(word)(index + x)] = (byte)fgetc(fp);
+
+	fclose(fp);
 }

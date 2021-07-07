@@ -9,6 +9,8 @@
 #define INT_VIDEO_SETMODE 0x00
 #define INT_VIDEO_PLOTPIXEL 0X0C
 
+#define COLOR_COUNT 256;
+
 byte *VGA = (char *)0xa0000;
 
 void video_setmode(byte mode) {
@@ -39,7 +41,7 @@ void plot_pixel(int x, int y, byte color) {
 void draw_bitmap(int x, int y, BITMAP *bitmap) {
 	byte data;
 	int ix, iy;
-	int scale = 10;
+	int scale = 1;
 	for (iy = 0; iy < bitmap->height * scale; iy++)
 		for (ix = 0; ix < bitmap->width * scale; ix++) {
 
